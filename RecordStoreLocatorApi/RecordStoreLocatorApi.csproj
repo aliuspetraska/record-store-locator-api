@@ -90,6 +90,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GooglePlaces.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

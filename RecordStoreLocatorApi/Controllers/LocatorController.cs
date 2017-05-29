@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecordStoreLocatorApi.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,6 +10,13 @@ namespace RecordStoreLocatorApi.Controllers
 {
     public class LocatorController : ApiController
     {
+        private GooglePlaces googlePlaces;
+
+        public LocatorController()
+        {
+            this.googlePlaces = new GooglePlaces();
+        }
+
         [HttpGet]
         public IHttpActionResult Get()
         {
