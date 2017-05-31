@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Formatting;
-using System.Net.Http.Headers;
+﻿using System.Net.Http.Formatting;
 using System.Web.Http;
 
 namespace RecordStoreLocatorApi
@@ -18,8 +14,8 @@ namespace RecordStoreLocatorApi
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                routeTemplate: "api/{controller}/{parameter}",
+                defaults: new { parameter = RouteParameter.Optional }
             );
 
             config.Formatters.Clear();
