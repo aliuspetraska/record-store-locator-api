@@ -11,7 +11,11 @@ namespace RecordStoreLocatorApi.Services
 
         public async Task<Geocode> Geocode(Location location)
         {
-            var client = new RestClient("https://maps.googleapis.com/maps/api/");
+            var client = new RestClient("https://maps.googleapis.com/maps/api/")
+            {
+                UserAgent = @"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+            };
+
             var request = new RestRequest("geocode/json", Method.GET);
 
             var parameters = new string[]
