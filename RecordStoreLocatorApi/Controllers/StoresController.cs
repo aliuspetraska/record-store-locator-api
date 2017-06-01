@@ -73,8 +73,10 @@ namespace RecordStoreLocatorApi.Controllers
                             website = details.result.website,
                             rating = details.result.rating,
                             open_now = store.opening_hours.open_now,
+                            closed_now = !store.opening_hours.open_now,
                             location = store.geometry.location,
-                            photos = photos
+                            photos = photos,
+                            default_photo = photos[0]
                         });
                     }
 

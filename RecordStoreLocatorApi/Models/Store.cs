@@ -12,8 +12,10 @@ namespace RecordStoreLocatorApi.Models
         public string international_phone_number { get; set; }
         public string website { get; set; }
         public double rating { get; set; }
-        public Location location { get; set; }
         public bool open_now { get; set; }
+        public bool closed_now { get; set; }
+        public Location location { get; set; }
         public List<string> photos { get; set; }
+        public string default_photo { get; set; }
     }
 }
